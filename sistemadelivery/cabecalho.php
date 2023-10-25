@@ -120,11 +120,11 @@
                     <li class="rd-nav-item"><a class="rd-nav-link" href="sobre.php">Sobre</a></li>
                     <!-- inclusao para identificar se existe uma sessão com o nome de usuário -->
                     <?php if (!isset($_SESSION['nome_usuario'])) {
-                      echo '<li class="rd-nav-item"><a class="rd-nav-link" href="login.php" target="_blank">Login</a></li>';
+                      echo '<li class="rd-nav-item"><a class="rd-nav-link" href="login.php">Login</a></li>';
                     } ?>
                      <?php if (isset($_SESSION['nome_usuario'])) {
-                      echo '<li class="rd-nav-item"><a class="rd-nav-link" href="painelcliente.php" target="_blank">Painel do cliente</a></li>';
-                      echo '<li class="rd-nav-item"><a class="rd-nav-link" href="logout.php" target="_blank">Sair</a></li>';
+                      echo '<li class="rd-nav-item"><a class="rd-nav-link" href="./painel-cliente/index.php">Painel do cliente</a></li>';
+                      echo '<li class="rd-nav-item"><a class="rd-nav-link" href="logout.php">Sair</a></li>';
                     } ?>
 
 

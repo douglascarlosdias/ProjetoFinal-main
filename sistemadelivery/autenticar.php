@@ -35,7 +35,7 @@ if($linhas > 0){
 
 
 	if($_SESSION['nivel_usuario'] == 'admin'){
-		echo "<script language='javascript'>window.location='painel-adm/index.php'; </script>";
+		echo "<script language='javascript'>window.location='paineladmin.php'; </script>";
 		exit();
 	}
 
