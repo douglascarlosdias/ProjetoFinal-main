@@ -122,8 +122,12 @@
                     <?php if (!isset($_SESSION['nome_usuario'])) {
                       echo '<li class="rd-nav-item"><a class="rd-nav-link" href="login.php">Login</a></li>';
                     } ?>
-                     <?php if (isset($_SESSION['nome_usuario'])) {
+                     <?php if(@$_SESSION['nivel_usuario'] == 'cliente'){
                       echo '<li class="rd-nav-item"><a class="rd-nav-link" href="./painel-cliente/index.php">Painel do cliente</a></li>';
+                      echo '<li class="rd-nav-item"><a class="rd-nav-link" href="logout.php">Sair</a></li>';
+                    } ?>
+                    <?php if(@$_SESSION['nivel_usuario'] == 'admin'){
+                      echo '<li class="rd-nav-item"><a class="rd-nav-link" href="./painel-administrativo/index.php">Painel Administrativo</a></li>';
                       echo '<li class="rd-nav-item"><a class="rd-nav-link" href="logout.php">Sair</a></li>';
                     } ?>
 
