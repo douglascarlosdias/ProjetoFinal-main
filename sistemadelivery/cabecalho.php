@@ -127,11 +127,11 @@
                       echo '<li class="rd-nav-item"><a class="rd-nav-link" href="logout.php">Sair</a></li>';
                     } ?>
                     <?php if(@$_SESSION['nivel_usuario'] == 'admin'){
-                      echo '<li class="rd-nav-item"><a class="rd-nav-link" href="./painel-administrativo/index.php">Painel Administrativo</a></li>';
+                      echo '<li class="rd-nav-item"><a class="rd-nav-link" href="./painel-administrativo/index.php" target="_blank">Painel Administrativo</a></li>';
                       echo '<li class="rd-nav-item"><a class="rd-nav-link" href="logout.php">Sair</a></li>';
                     } ?>
 
-
+                       
 
                     <li class="rd-nav-item"><a class="rd-nav-link" href="contatos.php">Contatos</a>
                     </li>
