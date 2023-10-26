@@ -40,6 +40,7 @@ if($linhas > 0){
 	}
 
 	if($_SESSION['nivel_usuario'] == 'cliente'){
+		echo "<script language='javascript'>window.alert('Login realizado com sucesso!'); </script>";
 		echo "<script language='javascript'>window.location='index.php'; </script>";
 		exit();
 	}
