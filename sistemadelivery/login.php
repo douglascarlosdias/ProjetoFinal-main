@@ -100,10 +100,7 @@
                         <label class="text-dark" for="exampleInputEmail1">Nome</label>
                         <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome e Sobrenome" required>
                     </div>
-                    <div class="form-group">
-                        <label class="text-dark" for="exampleInputEmail1">Endereço</label>
-                        <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Endereço" required>
-                    </div>
+                   
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">

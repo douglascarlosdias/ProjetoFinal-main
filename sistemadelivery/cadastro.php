@@ -6,7 +6,6 @@ include_once ("src/conexao.php");
 
 # recebe os valores enviados do formulário via método post.
 $nome = $_POST['nome'];
-$endereco = $_POST['endereco'];
 $cpf = $_POST['cpf'];
 $telefone = $_POST['telefone'];
 $email = $_POST['email'];
@@ -17,8 +16,8 @@ $nivel = "cliente";
 $dbh = Conexao::getConexao();
 
 # cria uma instrução SQL para inserir dados na tabela usuarios.
-$query = "INSERT INTO tiogogadelivery.usuarios (nome, endereco, cpf, telefone, email, senha, nivel) 
-                VALUES (:nome, :endereco, :cpf, :telefone, :email, :senha, :nivel);";
+$query = "INSERT INTO tiogogadelivery.usuarios (nome, cpf, telefone, email, senha, nivel) 
+                VALUES (:nome, :cpf, :telefone, :email, :senha, :nivel);";
 
  #prepara a execução da query e retorna para uma variável chamada stmt.
  $stmt = $dbh->prepare($query);
@@ -26,7 +25,6 @@ $query = "INSERT INTO tiogogadelivery.usuarios (nome, endereco, cpf, telefone, e
 # com a variável stmt, usada bindParam para associar a cada um dos parâmetro
 # e seu tipo (opcional).
 $stmt->bindParam(':nome', $nome);
-$stmt->bindParam(':endereco', $endereco);
 $stmt->bindParam(':cpf', $cpf);
 $stmt->bindParam(':telefone', $telefone);
 $stmt->bindParam(':email', $email);
