@@ -52,8 +52,8 @@
                         <!-- inclusao do nome do usuario dentro do carrinho e da classe css no arquivo style.css linha 12269  e identificação do usuário logado!-->
                         <span class="dados-usuarios">
                           <p>
-                            <a href="#" title="Clique aqui para editar seus dados">
-                            <?php echo $_SESSION['nome_usuario'] ?? '' ?></a>
+                            <a href="" data-toggle="modal" data-target="#modal-login" title="Clique aqui para editar seus dados">
+                              <?php echo $_SESSION['nome_usuario'] ?? '' ?></a>
                             <a href="logout.php" title="Sair">
                               <img src="images/logout.png" alt="" width="20px">
                             </a>
@@ -122,16 +122,16 @@
                     <?php if (!isset($_SESSION['nome_usuario'])) {
                       echo '<li class="rd-nav-item"><a class="rd-nav-link" href="login.php">Login</a></li>';
                     } ?>
-                     <?php if(@$_SESSION['nivel_usuario'] == 'cliente'){
+                    <?php if (@$_SESSION['nivel_usuario'] == 'cliente') {
                       echo '<li class="rd-nav-item"><a class="rd-nav-link" href="./painel-cliente/index.php">Painel do cliente</a></li>';
                       echo '<li class="rd-nav-item"><a class="rd-nav-link" href="logout.php">Sair</a></li>';
                     } ?>
-                    <?php if(@$_SESSION['nivel_usuario'] == 'admin'){
+                    <?php if (@$_SESSION['nivel_usuario'] == 'admin') {
                       echo '<li class="rd-nav-item"><a class="rd-nav-link" href="./painel-administrativo/index.php" target="_blank">Painel Administrativo</a></li>';
                       echo '<li class="rd-nav-item"><a class="rd-nav-link" href="logout.php">Sair</a></li>';
                     } ?>
 
-                       
+
 
                     <li class="rd-nav-item"><a class="rd-nav-link" href="contatos.php">Contatos</a>
                     </li>
@@ -160,7 +160,8 @@
                         <div class="unit unit-spacing-sm">
                           <div class="unit-left"><span class="fa-brands fa-whatsapp"></i> ></i>"></span></div>
                           <div class="unit-body"><img src="images/whatsapp-icon-transparent-free-png.webp" width="50" alt="" href="https://wa.me/5561994065329" target="_blank"><a target="_blank" title="Ir para o Whatssapp" class="link-phone" href="https://wa.me/5561994065329">61 99406-5329</a></div>
-                        </div>                      </li>
+                        </div>
+                      </li>
                       <li>
                         <div class="unit unit-spacing-sm">
                           <div class="unit-left"><span class="icon fa fa-location-arrow"></span></div>
@@ -189,3 +190,138 @@
         </nav>
       </div>
     </header>
+    <!-- janela modal -->
+
+    <div class="modal fade" id="modal-login" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Cadastre-se</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form method="post">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label class="text-dark" for="exampleInputEmail1">Nome</label>
+                    <input type="text" class="form-control form-control-sm" id="nome" name="nome" placeholder="Nome e Sobrenome" required>
+
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label class="text-dark" for="exampleInputEmail1">CPF</label>
+                    <input type="text" class="form-control form-control-sm" id="cpf" name="cpf" placeholder="CPF" required>
+
+                  </div>
+
+                </div>
+
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label class="text-dark" for="exampleInputEmail1">Telefone</label>
+                    <input type="text" class="form-control form-control-sm" id="telefone" name="telefone" placeholder="Telefone" required>
+
+                  </div>
+
+                </div>
+
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label class="text-dark" for="exampleInputEmail1">Email</label>
+                    <input type="email" class="form-control form-control-sm" id="email" name="email" placeholder="Email" required value="<?php echo @$email?>">
+
+                  </div>
+
+                </div>
+
+                <div class="col-md-5">
+                  <div class="form-group">
+                    <label class="text-dark" for="exampleInputEmail1">Rua</label>
+                    <input type="text" class="form-control form-control-sm" id="rua" name="rua" placeholder="rua" required value="<?php echo @$rua ?>">
+
+                  </div>
+
+                </div>
+
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label class="text-dark" for="exampleInputEmail1">Número</label>
+                    <input type="text" class="form-control form-control-sm" id="numero" name="numero" placeholder="numero" required value="<?php echo @$numero ?>">
+
+                  </div>
+
+                </div>
+                
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label class="text-dark" for="exampleInputEmail1">Bairro</label>
+                    <input type="text" class="form-control form-control-sm" id="bairro" name="numero" placeholder="Bairro" required value="<?php echo @$bairro ?>">
+
+                  </div>
+
+                </div>
+
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label class="text-dark" for="exampleInputEmail1">Cidade</label>
+                    <input type="text" class="form-control form-control-sm" id="cidade" name="cidade" placeholder="Cidade" required value="<?php echo @$cidade?>">
+
+                  </div>
+
+                </div>
+
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label class="text-dark" for="exampleInputEmail1">Cep</label>
+                    <input type="text" class="form-control form-control-sm" id="cidade" name="cep" placeholder="Cep" required value="<?php echo @$estado?>">
+
+                  </div>
+
+                </div>
+              
+
+                
+              </div>
+              </div>
+              
+              
+
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <div align="center" class="" id="mensagem">
+              </div>
+
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" id="btn-fechar" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            <button name="btn-cadastro" id="btn-cadastro" class="btn btn-info">Cadastrar</button>
+
+            </form>
+          
+          </div>
+        </div>
+      </div>
+    </div>
