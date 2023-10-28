@@ -68,7 +68,7 @@ if(@$_GET['acao'] == $item1){
           <a href="index.php?acao=<?php echo $item2?>" class="nav-link <?php $item2ativo ?>">Produtos</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-          <a href="index.php?acao=<?php echo $item3?>" class="nav-link <?php $item3ativo ?>">Categorias</a>
+          <a href="categorias/index.php" class="nav-link <?php $item3ativo ?>">Categorias</a>
         </li>
       </ul>
 

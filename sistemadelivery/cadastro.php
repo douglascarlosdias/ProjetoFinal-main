@@ -31,19 +31,6 @@ $stmt->bindParam(':email', $email);
 $stmt->bindParam(':senha', $senha);
 $stmt->bindParam(':nivel', $nivel);
 
-/*$query = "INSERT INTO tiogogadelivery.cliente (nome, cpf, telefone, email)
-                VALUES (:nome, :cpf, :telefone, :email);";
-
- #prepara a execução da query e retorna para uma variável chamada stmt.
- $stmt = $dbh->prepare($query);
-
-# com a variável stmt, usada bindParam para associar a cada um dos parâmetro
-# e seu tipo (opcional).
-$stmt->bindParam(':nome', $nome);
-$stmt->bindParam(':cpf', $cpf);
-$stmt->bindParam(':telefone', $telefone);
-$stmt->bindParam(':email', $email);*/
-
 
 
 # executa a instrução contida em stmt e se tudo der certo retorna uma valor maior que zero.

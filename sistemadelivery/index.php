@@ -40,7 +40,7 @@
   <div class="swiper-pagination swiper-pagination-style-2"></div>
 </section>
 
-<!-- Icons Ruby-->
+<!-- Icons Ruby
 <section class="section section-md bg-default section-top-image">
   <div class="container">
     <div class="row row-30 justify-content-center">
@@ -82,9 +82,22 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <!-- What people say-->
+
+<!-- categorias: -->
+<div class="categoria-1">
+  <button>
+    Pizza
+  </button>
+
+</div>
+
+
+
+
+
 <section class="section context-dark">
   <div class="parallax-container" data-parallax-img="images/bg-parallax-2.jpg">
     <div class="parallax-content section-md bg-overlay-2-21">

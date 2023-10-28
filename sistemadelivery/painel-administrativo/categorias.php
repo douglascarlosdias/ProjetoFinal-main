@@ -13,8 +13,8 @@ $pagina = 'categorias.php';
         <div class="direita">
             <!-- SEARCH FORM -->
             <form class="form-inline ml-3 float-right">
-                <div class="input-group input-group-sm">
-                    <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+                <div class="input-group input-group-sm" class="fundo-search">
+                    <input class="fundo-search" class="form-control form-control-navbar" type="search" placeholder="pesquisar categoria" aria-label="Search">
                     <div class="input-group-append">
                         <button class="btn btn-navbar" type="submit">
                             <i class="fas fa-search"></i>
