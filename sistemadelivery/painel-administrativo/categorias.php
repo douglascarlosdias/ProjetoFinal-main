@@ -9,8 +9,7 @@ $pagina = 'categorias.php';
     <nav class=" navbar navbar-expand navbar-white navbar-light">
 
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal">Nova Categoria</button>
-        <a href="index.php?acao=<?php echo $pagina ?>&funcao=novo" type="hidden" ></a>
-
+       
         <div class="direita">
             <!-- SEARCH FORM -->
             <form class="form-inline ml-3 float-right">
