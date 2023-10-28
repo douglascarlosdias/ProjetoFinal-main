@@ -9,7 +9,6 @@ if($_SESSION['nivel_usuario'] != 'admin'){
 
 }
 
-
 // estrutura do menu:
 $item1 = 'home';
 $item2 = 'produtos';
